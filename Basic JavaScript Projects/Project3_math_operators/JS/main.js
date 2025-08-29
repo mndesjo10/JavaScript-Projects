@@ -1,45 +1,56 @@
-// Function that performs addition and updates the paragraph
+// Output the result to the paragraph
+function updateDisplay(text) {
+    document.getElementById("Math").textContent = text;
+}
+
+// Addition
 function addNumbers() {
-    // Define two numbers
-    var num1 = 10;
-    var num2 = 5;
-
-    // Perform addition
-    var result = num1 + num2;
-
-    // Get the paragraph element by its ID
-    var mathParagraph = document.getElementById("Math");
-
-    // Display the result in the paragraph
-    mathParagraph.textContent = "Result: " + num1 + " + " + num2 + " = " + result;
+    let num1 = 10, num2 = 5;
+    let result = num1 + num2;
+    updateDisplay("Result: " + num1 + " + " + num2 + " = " + result);
 }
 
-// New: Subtraction operation
+// Subtraction
 function subtractNumbers() {
-    var num1 = 10;
-    var num2 = 5;
-    var result = num1 - num2; // Subtraction operation
-
-    var mathParagraph = document.getElementById("Math");
-    mathParagraph.textContent = "Result: " + num1 + " - " + num2 + " = " + result;
+    let num1 = 10, num2 = 5;
+    let result = num1 - num2;
+    updateDisplay("Result: " + num1 + " - " + num2 + " = " + result);
 }
 
-// New: Multiplication operation
+// Multiplication
 function multiplyNumbers() {
-    var num1 = 8;
-    var num2 = 7;
-    result = num1 * num2; // Multiplication operation
-
-    var mathParagraph = document.getElementById("Math");
-    mathParagraph.textContent = "Result: " + num1 + " * " + num2 + " = " + result;
+    let num1 = 8, num2 = 7;
+    let result = num1 * num2;
+    updateDisplay("Result: " + num1 + " * " + num2 + " = " + result);
 }
 
-// New: Division operation
+// Division with zero check
 function divideNumbers() {
-    var num1 = 100;
-    var num2 = 4;
-    var result = num1 / num2; // Division operation
-
-    var mathParagraph = document.getElementById("Math");
-    mathParagraph.textContent = "Result: " + num1 + " / " + num2 + " = " + result;
+    let num1 = 100, num2 = 4;
+    if (num2 === 0) {
+        updateDisplay("Error: Division by zero is not allowed.");
+        return;
+    }
+    let result = num1 / num2;
+    updateDisplay("Result: " + num1 + " / " + num2 + " = " + result);
 }
+
+// New: Modulus Operator
+function modulusNumbers() {
+    let num1 = 17, num2 = 5;
+    let result = num1 % num2;
+    updateDisplay("Result: " + num1 + " % " + num2 + " = " + result + " (remainder)");
+}
+
+// New: Exponentiation (Power)
+function powerNumbers() {
+    let num1 = 3, num2 = 4;
+    let result = num1 ** num2; // 3^4 = 81
+    updateDisplay("Result: " + num1 + " ^ " + num2 + " = " + result);
+}
+
+// Optional: Run on page load
+window.onload = function() {
+    updateDisplay("Ready! Click any button to perform an operation.");
+};
+
