@@ -40,84 +40,23 @@
                 cursor: pointer;
                 transition: background-color 0.3;
             }
-            #ConstructorResult {
-                padding: 15px;
-                margin: 20px auto;
-                width: fit-content;
-                background-color: #e8f5e8;
-                border: 2px solid #28a745;
-                border-radius: 8px;
-                color: #333;
-            }
-            #Nested_Function {
-                padding: 15px;
-                margin: 20px auto;
-                width: fit-content;
-                background-color: #e7f3ff;
-                border: 2px solid #007bff;
-                border-radius: 8px;
-                color: #333;
-                cursor: pointer;
-                transition: all 0.3s;
-            }
-            #Nested_Function:hover {
+            #Ride:hover {
                 background-color: #007bff;
                 color: white;
-                transform: scale(1.02);
-            }
-            #Ride:hover, #ConstructorResult:hover {
-                background-color: #007bff;
-                color: white;
-            }
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 0 20px;
-            }
-            h2 {
-                color: #333;
-                margin: 30px 0 15px 0;
-            }
-            .visitor-inputs {
-                margin: 15px 0;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <h1>Amusement Park Management System</h1>
 
-            <!-- Ternary Operator Section -->
-            <h2>Ride Eligibility Checker</h2>
-            <p>Riders must be at least 52 centimeters tall to ride.</p>
-            <label for="Height">Enter your height (cm):</label>
-            <input id="Height" type="number" value="52" title="Enter your height in centimeters" placeholder="Height in cm" />
-            <button onclick="Ride_Function()">Check Ride Eligibility</button>
-            <p id="Ride"></p>
-
-            <div class="visitor-inputs">
-                <label for="visitorName">Name:</label>
-                <input id="visitorName" type="text" value="John Anderson" placeholder="Enter Name" />
-
-                <label for="visitorAge">Age:</label>
-                <input id="visitorAge" type="number" value="30" placeholder="Enter Age" />
-
-                <label for="visitorTicket">Ticket Type:</label>
-                <select id="visitorTicket">
-                    <option value="Standard">Standard</option>
-                    <option value="VIP">VIP</option>
-                    <option value="Family">Family</option>
-                </select>
-            </div>
-            <button onclick="CreateVisitor()">Create Visitor Profile</button>
-            <p id="ConstructorResult"></p>
-
-            <!-- Nested Function Section -->
-            <h2>Nested Function Demonstration</h2>
-            <p id="Nested_Function" onclick="Nested_Function()">Click here to see nested function in action</p>
-        </div>
+        <h1>Amusement Park Ride Check</h1>
+        <p>Riders must be at least 52 centimeters tall to ride.</p>
+        <label for="Height">Enter your height (cm):</label>
+        <input id="Height" type="number" value="52" title="Enter your height in centimeters" placeholder="Height in cm" />
+        <button onclick="Ride_Function()">Check Ride Eligibility</button>
+        <p id="Ride"></p>
 
         <!-- Link to JavaScript -->
         <script src="js/main.js"></script>
+
     </body>
 </html>
