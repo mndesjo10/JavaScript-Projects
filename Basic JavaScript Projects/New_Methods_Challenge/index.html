@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>New Methods Challenge</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 50px;
+                background-color: #f8f9fa;
+                line-height: 1.6;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            .info-box {
+                background-color: #e9ecef;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 8px;
+                text-align: left;
+            }
+            button {
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #toFixedResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #e8f5e8;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                color: #28a745;
+            }
+            #valueOfResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #f8e1e1;
+                border: 2px solid #dc3545;
+                border-radius: 8px;
+                color: #dc3545;
+            }
+            code {
+                background-color: #f0f0f0;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>New Methods Challenge: toFixed() and valueOf()</h1>
+
+            <div class="info-box">
+                <h3>About the toFixed() Method:</h3>
+                <p>The <code>toFixed()</code> method formats a number using fixed-point notation.</p>
+                <p><strong>Definition:</strong> This method returns a string representation of the number with exactly the specified number of digits after the decimal point.</p>
+                <p><strong>Key Characteristics:</strong></p>
+                <ul>
+                    <li>Returns a string, not a number.</li>
+                    <li>Rounds the number if necessary.</li>
+                    <li>Pads zeros if needed</li>
+                    <li>Parameter range: 0-20 (some browsers support up to 100)</li>
+                    <li>Syntax: <code>number.toFixed(digits)</code></li>
+                </ul>
+                <p><strong>Common Use Cases:</strong> Currency formatting, percentage display, scientific measurements.</p>
+            </div>
+
+            <button onclick="demonstrateToFixed()">Demonstrate toFixed() Method</button>
+            <button onclick="resetToFixedResult()">Reset Result</button>
+
+            <!-- Added p element with id attribute as per assignment -->
+            <p id="toFixedResult">Click the button above to see the result of the toFixed() method.</p>
+
+            <div class="info-box">
+                <h3>About the valueOf() Method:</h3>
+                <p>The <code>valueOf()</code> method returns the primitive value of a Number object.</p>
+                <p><strong>Definition:</strong> This method returns the primitive value (number) of a Number object allowing for type comparison and arithmetic operations.</p>
+                <p><strong>Key Characteristics:</strong></p>
+                <ul>
+                    <li>Returns the primitive numeric value</li>
+                    <li>Called automatically by JavaScript in most operations</li>
+                    <li>Essential for understanding type coercion</li>
+                    <li>Syntax: <code>number.valueOf()</code></li>
+                    <li>Works with Number objects and primitive numbers</li>
+                </ul>
+                <p><strong>Common Use Cases:</strong> Type conversion, explicit value retrieval, understanding object vs primitive behavior.</p>
+            </div>
+
+            <button onclick="demonstrateValueOf()">Demonstrate valueOf() Method</button>
+            <button onclick="resetValueOfResult()">Reset Result</button>
+
+            <!-- Added p element with id attribute for valueOf method -->
+            <p id="valueOfResult">Click the button above to see the result of the valueOf() method.</p>
+
+            <div class="info-box">
+                <h3>Method Comparison:</h3>
+                <table style="width:100%; border-collapse: collapse;">
+                    <tr style="background-color: #dee206;">
+                        <th style="text-align: left; padding: 8px; border: 1px solid #ccc;">Method</th>
+                        <th style="text-align: left; padding: 8px; border: 1px solid #ccc;">Returns Type</th>
+                        <th style="text-align: left; padding: 8px; border: 1px solid #ccc;">Primary Use</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ccc;"><code>toFixed()</code></td>
+                        <td style="padding: 8px; border: 1px solid #ccc;">String</td>
+                        <td style="padding: 8px; border: 1px solid #ccc;">Formatting numbers for display</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid #ccc;"><code>valueOf()</code></td>
+                        <td style="padding: 8px; border: 1px solid #ccc;">Number (primitve)</td>
+                        <td style="padding: 8px; border: 1px solid #ccc;">Retrieving primitive values from objects</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Link to JavaScript file -->
+        <script src="JS/main.js"></script>
+    </body>
+</html>

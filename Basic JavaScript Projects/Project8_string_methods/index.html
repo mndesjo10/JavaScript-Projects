@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>String Concatenation Demo</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+                background-color: #f8f9fa;
+                line-height: 1.6;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            .info-box {
+                background-color: #e9ecef;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 8px;
+                text-align: left;
+            }
+            button {
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #result {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: white;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                color: #333;
+            }
+            #sliceResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #fff3cd;
+                border: 2px solid #ffc107;
+                border-radius: 8px;
+                color: #856404;
+            }
+            #numberResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #d1ccff;
+                border: 2px solid #4b0082;
+                border-radius: 8px;
+                color: #4b0082;
+            }
+            #precisionResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #d1ccff;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                color: #007bff;
+            }
+            code {
+                background-color: #f0f0f0;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>String Methods: concat() and slice()</h1>
+
+            <div class="info-box">
+                <h3>About the concat() Method:</h3>
+                <p>The <code>concat()</code> method is used to join two or more strings.</p>
+                <p>This method does not change the existing strings but returns a new string.</p>
+            </div>
+            
+            <button onclick="demonstrateConcat()">Demonstrate concat() Method</button>
+            <button onclick="resetResult()">Reset Result</button>
+
+            <!-- Added p element with id attribute as per assignment -->
+            <p id="result">Click the button above to see the result of string concatenation.</p>
+
+            <div class="info-box">
+                <h3>About the slice() Method:</h3>
+                <p>The <code>slice()</code> method extracts a section of a string and returns it as a new string.</p>
+                <p>Syntax: string.slice(start, end) where start is inclusive and end is exclusive.</p>
+            </div>
+
+            <button onclick="demonstrateSlice()">Demonstrate slice() Method</button>
+            <button onclick="resetSliceResult()">Reset Slice Result</button>
+
+            <!-- Added p element with id attribute for slice method -->
+            <p id="sliceResult">Click the button above to see the result of the slice() method.</p>
+
+            <div class="info-box">
+                <h3>About the toString() Method:</h3>
+                <p>The <code>toString()</code> method converts a number to a string.</p>
+                <p>Syntax: number.toString() or number.toString(base) where base is optional (default is 10).</p>
+            </div>
+
+            <button onclick="demonstrateToString()">Demonstrate toString() Method</button>
+            <button onclick="resetNumberResult()">Reset Number Result</button>
+
+            <!-- Added p element with id attribute for number method -->
+            <p id="numberResult">Click the button above to see the result of the toString() method.</p>
+
+            <div class="info-box">
+                <h3>About the toPrecision() Method:</h3>
+                <p>The <code>toPrecision()</code> method returns a string representing the number object to the specified precision.</p>
+                <p>Syntax: number.toPrecision(precision) where precision is the number of significant digits.</p>
+            </div>
+
+            <button onclick="demonstrateToPrecision()">Demonstrate toPrecision() Method</button>
+            <button onclick="resetPrecisionResult()">Reset Precision Result</button>
+
+            <!-- Added p element with id attribute for precision method -->
+            <p id="precisionResult">Click the button above to see the result of the toPrecision() method.</p>
+            
+            <div class="info-box">
+                <h3>How they works:</h3>
+                <p><strong>concat():</strong> Join strings together to create a new string.</p>
+                <p><strong>slice():</strong> Extracts a portion of a string based on index positions.</p>
+                <p><strong>toString():</strong> Converts to its string representation.</p>
+                <p><strong>toPrecision():</strong> Returns a string representation of number with specific precision.</p>
+            </div>
+        </div>
+
+        <!-- Link to JavaScript file -->
+        <script src="JS/main.js"></script>
+    </body>
+</html>
