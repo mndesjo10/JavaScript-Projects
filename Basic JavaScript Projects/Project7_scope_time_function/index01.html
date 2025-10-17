@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local and Global Variables</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+                background-color: #f8f9fa;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            .info-box {
+                background-color: #e9ecef;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 8px;
+                text-align: left;
+            }
+            button {
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            #result {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: white;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                color: #333;
+            }
+            #ageInput {
+                padding: 10px;
+                margin: 10px;
+                width: 100px;
+                font-size: 16px;
+                border: 2px solid #007bff;
+                border-radius: 4px;
+            }
+            #ageResult {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: #e8f5e8;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                color: #333;
+            }
+            code {
+                background-color: #f0f0f0;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Local and Global Variables Demonstration</h1>
+
+            <div class="info-box">
+                <h3>About Variable Scope</h3>
+                <p><strong>Global Variables</strong> are accessible from anywhere in the code.</p>
+                <p><strong>Local Variables</strong> exist only within the function they are declared in.</p>
+            </div>
+            
+            <button onclick="testVariables()">Test Variables</button>
+            <button onclick="triggerError()">Trigger Intenational Error</button>
+            <button onclick="showTime()">Show Current Time</button>
+            <button onclick="checkWeatherRecommendation()">Check Weather Recommendation</button>
+
+            <p id="result">Click a button to see results...</p>
+
+            <!-- Added p element with id and onclick attribute -->
+            <p id="timeGreeting" onclick="displayTimeBasedMessage()">Click here to get a time-based greeting!</p>
+
+             <!-- Else Element -->
+             <div class="info-box">
+                <h3>Age Verification</h3>
+                <p>Enter your age below to check what activities you're eligible for:</p>
+
+                <!-- Input element with id attribute -->
+                <input id="ageInput" type="number" placeholder="Your age" value="25">
+
+                <!-- Button to trigger the JavaScript function -->
+                <button onclick="checkAgeEligibility()">Check Eligibility</button>
+
+                <!-- Paragraph element with id attribute to display results -->
+                <p id="ageResult">Your eligibility results will appear here...</p>
+             </div>
+
+            <div class="info-box">
+                <h3>Debugging Instructions:</h3>
+                <p>Open Chrome Dev Tools (12) and click "Trigger International Error" to see console.log() debugging in action.</p>
+            </div>
+        </div>
+
+        <!-- Link to JavaScript file -->
+        <script src="JS/main01.js"></script>
+    </body>
+</html>            

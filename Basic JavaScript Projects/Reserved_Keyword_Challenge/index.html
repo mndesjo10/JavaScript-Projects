@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reserved Word Variable and Constructor Function</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f7fa;
+                color: #333;
+                line-height: 1.6;
+            }
+            .container {
+                background-color: white;
+                border-radius: 10px;
+                padding: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            h1, h2 {
+                color: #333;
+            }
+            .code-block {
+                background-color: #f0f0f0;
+                border-left: 4px solid #007acc;
+                padding: 15px;
+                margin: 15px 0;
+                overflow-x: auto;
+                font-family:'Courier New', monospace;
+                border-radius: 4px;
+            }
+            .result {
+                margin: 15px 0;
+                padding: 10px;
+                background-color: #e8f5e8;
+                border-radius: 4px;
+                font-family: bold;
+            }
+            .warning {
+                color: #d9534f;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>JavaScript Reserved Word Variable and Constructor Function</h1>
+
+            <h2>1. Assigning a Value to a Reserved Word</h2>
+            <p class="warning">Note: In modern JavaScript, you cannot use reserved words as varaible names in strict mode.</p>
+
+            <div class="code-block">
+    // Attempting to use a reserved word as a variable name
+    // This will cause a syntax error in most cases
+
+    try {
+        // Using eval to demonstrate the concept (not recommended in practice)
+        eval("var Function = 'This is not allowed';"");
+        document.getElementById('reservedResult').innerHTML = "Successfully assigned value to 'function' variable";
+    } catch (error) {
+        document.getElementById('reservedResult').innerHTML = "Error: Cannot use reserved words as variable names. " + error.message;
+    }
+            </div>
+
+            <div class="result" id="reservedResult"></div>
+
+            <h2>2. Object Constructor Function</h2>
+            <p>Creating a constructor function to create person object:</p>
+
+            <div class="code-block">
+    // Boject constructor function for creating Person objects
+    funtion Person(name, age, occupation) {
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+
+        // Method attached to the constructor
+        this.greet = function() {
+            return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+        };
+
+        this.getDetails = function() {
+            return this.name + " is a " + this.age + " year old " + this.occupation + ".";
+        };
+    }
+
+    // Creating instances of Person using the constructor
+    var person1 = new Person("John Anderson", 28, "Software Engineer");
+    var person2 = new Person("Joe Mendy", 35, "Product Manager");
+    var person3 = new Person("Angelina Jolie", 30, "Designer");
+
+    // Displaying the created objects
+    console.log(person1);
+    console.log(person2);
+    console.log(person3);
+
+    // Using methods from the objects
+    console.log(person1.greet());
+    console.log(person2.getDetails());
+            </div>
+
+            <div class="result" id="constructorResult"></div>
+        </div>
+
+        <script>
+            // Handle the reserved word attempt
+            try {
+                // We'll use a non-reserved word to demonstrate the concept
+                // since actual reserved words will throw syntax errors
+                var funcName = 'function'; // Using a different variable name
+                var reservedValue = 'This demonstrate the concept';
+                document.getElementById('reservedResult').innerHTML = "Note: Direct use of reserved words like 'function', 'var', 'class', etc. as variable names causes errors in JavaScript. This example shows the concept but uses alternative naming.";
+            } catch (error) {
+                document.getElementById('reservedResult').innerHTML = "Error: Cannot use reserved words as variable names. " + error.message;
+            }
+
+            // Constructor function implementation
+            function Person(name, age, occupation) {
+                this.name = name;
+                this.age = age;
+                this.occupation = occupation;
+
+                this.greet = function() {
+                    return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+                };
+
+                this.getDetails = function() {
+                    return this.name + " is a " + this.age + " year old " + this.occupation + ".";
+                };
+            }
+
+            // Create instances
+            var person1 = new Person("John Anderson", 28, "Software Engineer");
+            var person2 = new Person("Joe Mendy", 35, "Product Manager");
+            var person3 = new Person("Angelina Jolie", 30, "Designer");
+
+            // Display results
+            var resultHTML = "<strong>Created Persons Objects:</strong><br>";
+            resultHTML += "Person 1: " + person1.getDetails() + "<br>";
+            resultHTML += "Person 2: " + person2.getDetails() + "<br>";
+            resultHTML += "Person 3: " + person3.getDetails() + "<br><br>";
+            resultHTML += "<strong>Greetings:</strong><br>";
+            resultHTML += person1.greet() + "<br>";
+            resultHTML += person2.greet();
+
+            document.getElementById('constructorResult').innerHTML = resultHTML;
+        </script>
+    </body>
+</html>
+            
