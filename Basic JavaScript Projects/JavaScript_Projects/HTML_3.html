@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data Attribute Assignment</title>
+        <script src="JavaScript/JavaScript_3.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+                background-color: #f8f9fa;
+                line-height: 1.6;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                color: #333;
+            }
+            .info-box {
+                background-color: #e9ecef;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 8px;
+                text-align: left;
+            }
+            button {
+                margin: 10px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            .data-element {
+                padding: 15px;
+                margin: 20px auto;
+                width: fit-content;
+                background-color: white;
+                border: 2px solid #007bff;
+                border-radius: 8px;
+                color: #333;
+                transition: all 0.3s ease;
+            }
+            .data-element:hover {
+                transform: scale(1.02);
+                box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+            }
+            code {
+                background-color: #f0f0f0;
+                padding: 2px 6px;
+                border-radius: 3px;
+                font-family: 'Courier New', monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Data Attribute Assignment</h1>
+            <div class="info-box">
+                <h3>About Data Attributes:</h3>
+                <p>Data attributes are custom attributes that allow you to store extra information on standard, semantic HTML elements without other hacks like non-standard attributes or extra properties on DOM.</p>
+                <p>Syntax: <code>data-{name}</code> where {name} is a custom name for your attribute.</p>
+                <p>To access data attributes in JavaScript, use <code>element.dataset.{name}</code>.</p>
+            </div>
+
+            <!-- Example 1: Simple data attribute -->
+            <div class="data-element" data-info="This is a simple data attribute example.">
+                <h3>Simple Data Attribute</h3>
+                <p>This element has a data-info attribute with value "This is a simple data attribute example."</p>
+                <button onclick="showDataAttribute(this)">Show Data Attribute</button>
+            </div>
+
+            <!-- Example 2: Multiple data attributes -->
+            <div class="data-element"
+                data-product-name="JavaScript Course"
+                data-price="99.99"
+                data-in-stock="true"
+                data-category="Programming">
+                <h3>Multiple Data Attributes</h3>
+                <p>This element has multiple data attributes for product information.</p>
+                <button onclick="showProductInfo(this)">Show Product Info</button>
+            </div>
+
+            <!-- Example 3: Data attributes with numbers -->
+            <div class="data-element"
+                data-score="85"
+                data-level="3"
+                data-max-score="100">
+                <h3>Numeric Data Attributes</h3>
+                <p>This element stores numeric values as data attributes.</p>
+                <button onclick="calculateScore(this)">Calculate Score Percentage</button>
+            </div>
+
+            <!-- Example 4: Data attributes with complex values -->
+            <div class="data-element"
+                data-user-info='{"name": "John Anderson", "age": 30, "city": "New York"}'
+                data-tags="javascript,html,css">
+                <h3>Complex Data Attributes</h3>
+                <p>This element stores JSON and comma-separated values in data attributes.</p>
+                <button onclick="parseUserData(this)">Parse User Data</button>
+            </div>
+
+            <!-- Example 5: Dynamic data attributes -->
+            <div class="data-element" id="dynamicElement">
+                <h3>Dynamic Data Attributes</h3>
+                <p>This element will have data attributes added dynamically.</p>
+                <button onclick="addDataAttributes()">Add Data Attributes</button>
+                <button onclick="removeDataAttributes()">Remove Data Attributes</button>
+            </div>
+
+            <!-- Display area for results -->
+            <div class="info-box" id="resultDisplay">
+                <h3>Results:</h3>
+                <p>Click the buttons above to see the results of data attribute operations.</p>
+            </div>
+        </div>
+    </body>
+</html>
