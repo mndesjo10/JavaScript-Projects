@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Canvas Element & Switch Statement  & getElementByClassName</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="JavaScript/JavaScript_1.js" defer></script>
+    </head>
+    <body>
+        <h1>Canvas Element</h1>
+
+        <!-- Canvas element Section -->
+        <div>
+            <canvas id="myCanvas" width="400" height="200"></canvas>
+            <canvas id="myCanvas" width="400" height="200" style="border: 2px solid black;"></canvas>
+            <br><br>
+            <button onclick="drawOnCanvas()">Draw on Canvas</button>
+        </div>
+
+        <br><hr><br>
+
+        <!-- Switch Statement Section -->
+        <div>
+            <h3>Switch statement</h3>
+            <p id="result">Click the button below to see the switch statement in action:</p>
+            <button onclick="evaluateDay()">Evaluate Day</button>
+        </div>
+
+        <br><hr><br>
+
+        <!-- getElementByClassName Section -->
+        <div>
+            <h3>document.getElementsByClassName() Method</h3>
+            <p class="highlight">This is paragraph 1.</p>
+            <p class="highlight">This is paragraph 2.</p>
+            <p class="highlight">This is paragraph 3.</p>
+            <p class="highlight">This is paragraph 4.</p>
+            <p class="highlight">This is paragraph 5.</p>
+            <br>
+            <button onclick="changeHighlights()">Change All Highlighted Text</button>
+            <div id="output"></div>
+        </div>
+  </body>
+</html>

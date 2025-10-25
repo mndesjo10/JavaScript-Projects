@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Returns Statement Challenge</title>
+        <script>
+            // Function that uses the return statement
+            function multiplyNumbers(a, b) {
+                // Multiply the two numbers and return the result
+                return a * b;
+            }
+
+            // Function to display the result in an alert
+            function showResult() {
+                // Call the multiplyNumbers function and store the returned value
+                const result = multiplyNumbers(5, 7);
+
+                // Display the result in an alert
+                alert("The result of 5 * 7 is: " + result);
+            }
+
+            // Execute the function when the page loads
+            window.onload = showResult;
+        </script>
+    </head>
+    <body>
+        <h1>Return Statement Challenge</h1>
+        <p>Check your browser's alert box to see the result.</p>
+    </body>
+</html>

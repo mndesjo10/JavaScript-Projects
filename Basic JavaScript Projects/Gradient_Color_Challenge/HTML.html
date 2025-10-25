@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gradient Color Challenge</title>
+    </head>
+    <body>
+        <canvas id="gradientCanvas" width="500" height="300"></canvas>
+
+        <script>
+            // Get the canvas element
+            const canvas = document.getElementById('gradientCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Create a linear gradient from left to right
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+
+            // Add color stops to the gradient
+            gradient.addColorStop(0, 'blue');     // Start with blue on the left
+            gradient.addColorStop(0.5, 'green');  // Transition to green in the middle
+            gradient.addColorStop(1, 'red');      // End with red on the right
+
+            // Set the gradient as the fill style
+            ctx.fillStyle = gradient;
+
+            // Fill the entire canvas with the gradient
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        </script>
+    </body>
+</html>

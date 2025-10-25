@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrow Function Challenge</title>
+    </head>
+    <body>
+        <h1>Arrow Function Challenge</h1>
+        <div id="output"></div>
+
+        <!-- Step 2: Write inline JavaScript function -->
+         <script>
+            // Regular function (Step 2)
+            function greet(name) {
+                return "Hello, " + name + "!";
+            }
+
+            // Display result of regular function
+            document.getElementById('output').innerHTML += "<p>Regular function result: " + greet("John") + "</p>";
+
+            // Step 5: Rewrite as arrow function
+            const greetArrow = (name) => {
+                return "Hello, " + name + "!";
+            };
+
+            // Display result of arrow function
+            document.getElementById('output').innerHTML += "<p>Arrow function result: " + greetArrow("Jane") + "</p>";
+
+            // Additional examples to demonstrate arrow functions
+
+            // Simple arrow function with one parameter and implicit return
+            const add = (a, b) => a + b;
+            document.getElementById('output').innerHTML += "<p>Add function result: " + add(5, 3) + "</p>";
+
+            // Arrow function with no parameters
+            const sayHello = () => "Hello, World!";
+            document.getElementById('output').innerHTML += "<p>Say Hello result: " + sayHello() + "</p>";
+
+            // Arrow function with multiple statements
+            const calculateArea = (lenght, width) => {
+                const area = lenght * width;
+                return `The area is ${area} square units`;
+            };
+            document.getElementById('output').innerHTML += "<p>Area calculation: " + calculateArea(10, 5) + "</p>";
+        </script>
+    </body>
+</html>

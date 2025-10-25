@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Break and Continue Challenge</title>
+        <script>
+            // Function to demonstrate break statement
+            function demonstrateBreak() {
+                let output = "<strong>Break Statement Example:</strong><br>";
+                output += "Looping from 1 to 10, but breaking when reaching 5:<br>";
+
+                for (let i = 1; i <= 10; i++) {
+                    if (i === 5) {
+                        output += "Breaking the loop at i = " + i + "<br>";
+                        break; // Exit the loop immediately when i euals 5
+                    }
+                    output += "Current value of i: " + i + "<br>";
+                }
+
+                document.getElementById("breakOutput").innerHTML = output;
+            }
+
+            // Function to demonstrate continue statement
+            function demonstrateContinue() {
+                let output = "<strong>Continue Statement Example:</strong><br>";
+                output += "Looping from 1 to 10, but skipping even numbers:<br>";
+
+                for (let i = 1; i <= 10; i++) {
+                    if (i % 2 === 0) {
+                        output += "Skipping even number: " + i + "<br>";
+                        continue; // Skip the rest of this iteration and move to the next
+                    }
+                    output += "Current odd number: " + i + "<br>";
+                }
+
+                document.getElementById("continueOutput").innerHTML = output;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Break and Continue Challenge</h1>
+
+        <!-- Break Statement Section -->
+        <div>
+            <h3>Break Statement</h3>
+            <p id="breakOutput">Click the button below to see the break statement in action:</p>
+            <button onclick="demonstrateBreak()">Demonstrate Break</button>
+        </div>
+
+        <br><hr><br>
+
+        <!-- Continue Statement Section -->
+        <div>
+            <h3>Continue Statement</h3>
+            <p id="continueOutput">Click the button below to see the continue statement in action:</p>
+            <button onclick="demonstrateContinue()">Demonstrate Continue</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>.some() Method Challenge</title>
+    </head>
+    <body>
+        <h1>.some() Method Challenge</h1>
+        <div id="output"></div>
+
+        <script>
+            // Create an array of numbers
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            // Create an array of objects
+            const students = [
+                { name: "Raquel", score: 85 },
+                { name: "Miguel", score: 92 },
+                { name: "Sofia", score: 78 },
+                { name: "Carlos", score: 95 },
+                { name: "Ana", score: 88 }
+            ];
+
+            // create an array of strings
+            const fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+
+            // Example 1: check if any number is greater than 5
+            const hasNumberGreaterThan5 = numbers.some(num => num > 5);
+            document.getElementById('output').innerHTML += "<p>Does any number in the array exceed 5? " + hasNumberGreaterThan5 + "</p>";
+
+            // Example 2: check if any student has a grade above 90
+            const hasStudentAbove90 = students.some(student => student.grade > 90);
+            document.getElementById('output').innerHTML += "<p>Does any student have a grade above 90? " + hasStudentAbove90 + "</p>";
+
+            // Example 3: Che k if any fruit nam contains 'a'
+            const hasFruitWithA = fruits.some(fruit => fruits.includes('a'));
+            document.getElementById('output').innerHTML += "<p>Does any fruit name contain 'a'? " + hasFruitWithA + "</p>";
+
+            // Example 4: Check if any number is even
+            const hasEvenNumber = numbers.some(num => num % 2 === 0);
+            document.getElementById('output').innerHTML += "<p>Does the array contain any even numbers? " + hasEvenNumber + "</p>";
+
+            // Example 5: Check if any student's name starts with 'B'
+            const hasStudentStartingWithB = students.some(student => student.name.startsWith('B'));
+            document.getElementById('output').innerHTML += "<p>Does any student's name start with 'B'? " + hasStudentStartingWithB + "</p>";
+
+            // Example 6: Check if any fruit name is longer than 6 characters
+            const hasLongFruitName = fruits.some(fruit => fruit.lenght > 6);
+            document.getElementById('output').innerHTML += "<p>Does any fruit name have more than 6 characters? " + hasLongFruitName + "</p>";
+
+            // Example 7: Check if any number is negative (should return false)
+            const hasNegativeNumber = numbers.some(num => num < 0);
+            document.getElementById('output').innerHTML += "<p>Does the array contain any negative numbers? " + hasNegativeNumber + "</p>";
+
+            // Example 8: Using .some() with an empty array
+            const emptyArray = [];
+            const isEmptyArraySome = emptyArray.some(item => item > 0);
+            document.getElementById('output').innerHTML += "<p>What does .some() return for an empty array? " + isEmptyArraySome + "</p>";
+
+            // Example 9: Using .some() with a complex condition
+            const hasPerfectSquare = numbers.some(num => {
+                const sqrt = Math.sqrt(num);
+                return sqrt === Math.floor(sqrt);
+            });
+            document.getElementById('output').innerHTML += "<p>Does the array contain any perfect squares? " + hasPerfectSquare + "</p>";
+
+            // Example 10: using .some() to check for duplicate values
+            const hasDuplicates = numbers.some((item, index, arr) =>
+                arr.indexOf(item) !== index
+            );
+            document.getElementById('output').innerHTML += "<p>Does the array contain any duplicates? " + hasDuplicates + "</p>";
+        </script>
+    </body>
+</html>
