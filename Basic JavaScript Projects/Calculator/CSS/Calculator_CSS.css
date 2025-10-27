@@ -1,0 +1,69 @@
+/* Basic styling for the calculator */
+.calculator {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 60px;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-keys button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    transition: background-color 0.2s;
+}
+
+.calculator-keys button:hover {
+    background-color: #ccc;
+}
+
+.calculator-keys .operator {
+    background-color: #ff9900;
+    color: white;
+}
+
+.calculator-keys .operator:hover {
+    background-color: #e68a00;
+}
+
+.calculator-keys .function {
+    background-color: #ff6666;
+    color: white;
+}
+
+.calculator-keys .function:hover {
+    background-color: #e65c5c;
+}
+
+.calculator-keys .equal-sign {
+    background-color: #00cc66;
+    color: white;
+}
+
+.calculator-keys .equal-sign:hover {
+    background-color: #00b359;
+}
