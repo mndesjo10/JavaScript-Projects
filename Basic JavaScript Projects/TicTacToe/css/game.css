@@ -103,6 +103,9 @@ td {
     width: 200px;
     height: 200px;
     filter: contrast(3);
+    background-size: contain; /* Add this line */
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 canvas {
