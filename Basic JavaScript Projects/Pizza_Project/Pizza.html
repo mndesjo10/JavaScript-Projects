@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Galaxy Pizza</title>
+        <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
+        <script src="Pizza_JavaScript/Pizza.js" defer></script>    
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <h1>Galaxy Pizza</h1>
+            <nav>
+                <a href="#order">Order</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Galaxy Pizza Banner">
+            <h2>Galaxy Pizza</h2>
+            <p>We have the most delicious pizzas you'll think it's magical!</p>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order" class="order-section">
+            <h2>--- Order ---</h2>
+
+            <div class="menu-grid">
+                <!-- Size -->
+                 <div class="menu-item">
+                    <h3>Size</h3>
+                    <input type="radio" id="personal" name="size" value="7.00">
+                    <label for="personal">personal ........... £7.00</label><br>
+                    <input type="radio" id="small" name="size" value="9.00">
+                    <label for="small">Small ........... £9.00</label><br>
+                    <input type="radio" id="medium" name="size" value="11.00" checked>
+                    <label for="medium">Medium ........... £11.00</label><br>
+                    <input type="radio" id="large" name="size" value="15.00">
+                    <label for="large">Large ........... £15.00</label><br>
+                    <input type="radio" id="extra-large" name="size" value="17.00">
+                    <label for="extra-large">Extra Large ........... £17.00</label>
+                </div>
+                
+                <!-- Crust -->
+                <div class="menu-item">
+                    <h3>Crust</h3>
+                    <input type="radio" id="regular" name="crust" value="0">
+                    <label for="regular">Regular</label><br>
+                    <input type="radio" id="garlic-butter" name="crust" value="0">
+                    <label for="garlic-butter">Garlic Butter</label><br>
+                    <input type="radio" id="cheese-stuffed" name="crust" value="4.00" checked>
+                    <label for="cheese-stuffed">Cheese Stuffed ........... £4.00</label><br>
+                    <input type="radio" id="spicy" name="crust" value="0">
+                    <label for="spicy">Spicy</label><br>
+                    <input type="radio" id="house-special" name="crust" value="0">
+                    <label for="house-special">House Special</label> 
+                </div>
+
+                <!-- Sauce -->
+                <div class="menu-item">
+                    <h3>Sauce</h3>
+                    <input type="radio" id="marinara" name="sauce" value="0" checked>
+                    <label for="marinara">Marinara Sauce</label><br>
+                    <input type="radio" id="white" name="sauce" value="0">
+                    <label for="white">White Sauce</label><br>
+                    <input type="radio" id="barbeque" name="sauce" value="0">
+                    <label for="barbeque">Barbeque Sauce</label><br>
+                    <input type="radio" id="no-sauce" name="sauce" value="0">
+                    <label for="no-sauce">No Sauce</label>
+                </div>
+
+                <!-- Cheese -->
+                <div class="menu-item">
+                    <h3>Cheese</h3>
+                    <input type="radio" id="regular-cheese" name="cheese" value="0">
+                    <label for="regular-cheese">Regular</label><br>
+                    <input type="radio" id="extra-cheese" name="cheese" value="4.00" checked>
+                    <label for="extra-cheese">Extra Cheese ........... £4.00</label><br>
+                    <input type="radio" id="no-cheese" name="cheese" value="0">
+                    <label for="no-cheese">No Cheese</label>
+                </div>
+
+                <!-- Veggies -->
+                <div class="menu-item">
+                    <h3>Veggies</h3>
+                    <input type="checkbox" id="tomatoes" name="veggie" value="1">
+                    <label for="tomatoes">Tomatoes</label><br>
+                    <input type="checkbox" id="onions" name="veggie" value="1">
+                    <label for="onions">Onions</label><br>
+                    <input type="checkbox" id="olives" name="veggie" value="1">
+                    <label for="olives">Olives</label><br>
+                    <input type="checkbox" id="green-peppers" name="veggie" value="1">
+                    <label for="green-peppers">Green Peppers</label><br>
+                    <input type="checkbox" id="mushrooms" name="veggie" value="1" checked>
+                    <label for="mushrooms">Mushrooms</label><br>
+                    <input type="checkbox" id="pineapple" name="veggie" value="1">
+                    <label for="pineapple" >Pineapple</label><br>
+                    <input type="checkbox" id="spinach" name="veggie" value="1" checked>
+                    <label for="spinach">Spinach</label><br>
+                    <input type="checkbox" id="jalapeno" name="veggie" value="1">
+                    <label for="jalapeno">Jalapeno</label>
+                    <p class="note">Note: First veggie topping is complimentary, +£2.00/topping for additional toppings.</p>
+                </div>
+
+                <!-- Meat -->
+                <div class="menu-item">
+                    <h3>Meat</h3>
+                    <input type="checkbox" id="pepperoni" name="meat" value="1" checked>
+                    <label for="pepperoni">Pepperoni</label><br>
+                    <input type="checkbox" id="sausage" name="meat" value="1">
+                    <label for="sausage">Sausage</label><br>
+                    <input type="checkbox" id="canadian-bacon" name="meat" value="1">
+                    <label for="canadian-bacon">Canadian Bacon</label><br>
+                    <input type="checkbox" id="ground-beef" name="meat" value="1">
+                    <label for="ground-beef">Ground Beef</label><br>
+                    <input type="checkbox" id="chicken" name="meat" value="1">
+                    <label for="chicken">Chicken</label><br>
+                    <input type="checkbox" id="anchovy" name="meat" value="1">
+                    <label for="anchovy">Anchovy</label><br>
+                    <input type="checkbox" id="salami" name="meat" value="1">
+                    <label for="salami">Salami</label><br>
+                    <p class="note">Note: First meat topping is complimentary, +£2.00/topping for additional toppings.</p>
+                </div>
+
+                
+                <!-- Specialty Pizzas -->
+                <div class="menu-item">
+                    <h3>Specialty Pizzas</h3>
+                    <input type="radio" id="galaxy-supreme" name="specialty" value="0">
+                    <label for="galaxy-supreme">Galaxy Supreme</label><br>
+                    <input type="radio" id="nebula-veggie" name="specialty" value="0">
+                    <label for="nebula-veggie">Nebula Veggie</label><br>
+                    <input type="radio" id="black-hole-meat" name="specialty" value="0">
+                    <label for="black-hole-meat">Black Hole Meat Feast</label><br>
+                    <input type="radio" id="milky-way-margherita" name="specialty" value="0">
+                    <label for="milky-way-margherita">Milky Way Margherita</label><br>
+                    <input type="radio" id="no-specialty" name="specialty" value="0" checked>
+                    <label for="no-specialty">Build Your Own</label>
+                    <p class="note">Choose a specialty pizza or build your own!</p>
+                </div>
+
+                <!-- Drinks & Desserts -->
+                <div class="menu-item">
+                    <h3>Drinks & Desserts</h3>
+                    <input type="checkbox" id="cosmic-cola" name="drink" value="3.50">
+                    <label for="cosmic-cola">Cosmic Cola ........... £3.50</label><br>
+                    <input type="checkbox" id="starbust-lemonade" name="drink" value="4.00">
+                    <label for="starbust-lemonade">Starbust Lemonade ........... £4.00</label><br>
+                    <input type="checkbox" id="moon-milkshake" name="drink" value="4.50">
+                    <label for="moon-milkshake">Moon Milkshake ........... £4.50</label><br>
+                    <input type="checkbox" id="galaxy-gelato" name="desert" value="4.00">
+                    <label for="galaxy-gelato">Galaxy Gelato ........... £4.00</label><br>
+                    <input type="checkbox" id="meteor-brownie" name="dessert" value="3.75">
+                    <label for="meteor-brownie">Meteor Brownie ........... £3.75</label><br>
+                    <input type="checkbox" id="space-cake" name="dessert" value="3.25">
+                    <label for="space-cake">Space Cake ........... £3.25</label>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <button id="cancel-btn">Cancel</button>
+                <button id="place-order-btn">Place Order</button>
+                <div class="summary-box">
+                    <h3>--- Order ---</h3>
+                    <div id="order-item">
+                        <strong>Item</strong> <strong>Subtotal</strong>
+                        <!-- Item will be added here by JavaScript -->
+                    </div>
+                    <p><strong>Total Price:</strong> <span id="total-price">£0.00</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <img src="images/pizza-slice-galaxy.png" alt="Pizza Slice Galaxy" width="50">
+            <img src="images/alien-image.png" alt="Galaxy Pizza Logo" width="50">
+            <p>Copyright Galaxy Pizza 2025</p>
+        </footer>
+    </body>
+</html>
