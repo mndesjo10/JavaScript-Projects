@@ -1,0 +1,19 @@
+<!DCOTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Elements Challenge</title>
+    </head>
+    <body>
+        <h2>Elements Challenge</h2>
+        <div id="demo-element">This is the original content.</div>
+        <button onclick="changeContent()">Click to change content</button>
+
+        <script>
+            function changeContent() {
+                // using the innerHTML porperty to change content of an element
+                document.getElementById('demo-element').innerHTML = "✅ Success! You've changed the content using the innerHTML property.";
+            }
+        </script>
+    </body>
+</html>

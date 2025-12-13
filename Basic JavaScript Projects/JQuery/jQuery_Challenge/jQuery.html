@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Challenge</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+
+            .challenge-container {
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #333;
+                text-align: center;
+            }
+
+            .button {
+                display: inline-block;
+                padding:12px 24px;
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 10px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+
+            .button:hover {
+                background-color: #45a049;
+                transform: translateY(-2px);
+            }
+
+            .event-demo {
+                margin: 20px 0;
+                padding: 20px;
+                background-color: #e3f2fd;
+                border: 2px soloid #2196F3;
+                border-radius: 8px;
+                min-height: 100px;
+            }
+
+            .effect-demo {
+                margin: 20px 0;
+                padding: 20px;
+                background-color: #fff3cd;
+                border: 2px solid #ffc107;
+                border-radius: 8px;
+                min-height: 100px;
+                text-align: center;
+            }
+
+            .highlight {
+                background-color: yellow;
+                padding: 5px;
+                border-radius: 3px;
+            }
+
+            .hiddden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challenge-container">
+            <h1>jQuery Challenge</h1>
+
+            <div class="event-demo">
+                <h3>✅ jQuery Event: Click Event (Event Basics)</h3>
+                <p>Click the button below to trigger a click event:</p>
+                <button id="click-event-btn" class="button">Click me!</button>
+                <div id="event-result" style="margin-top: 15px; font-weight: bold;"></div>
+            </div>
+
+            <div class="effect-demo">
+                <h3>✅ jQuery Effect: FadeIn/FadeOut (Introduction to Effects)</h3>
+                <p>Click the button below to see the fade effect:</p>
+                <button id="effect-target-btn" class="button">Toggle Fade Effect</button>   
+                <div id="effect-target" class="hidden" style="margin-top: 15px; padding: 15px; background-color: #d1e7dd; border-radius: 5px;">
+                    <h4>This content fades in and out using jQuery effects!</h4>
+                    <p>The <code>.fadeIn()</code> and <code>.fadeOut()</code> methods are party of jQuery's effects library.</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+
+                // ====== 1. jQuery EVENT: Click Event (Event Basics) ======
+                $('#click-event-btn').click(function() {
+                    // Change the content when clicked
+                    $('#event-result').text('🎉 You successfully executed a jQuery click event!');
+                    $('#event-result').addClass('hightlight');
+
+                    // Add some animattion to show it's working
+                    $('#event-result').css('color', 'green').animate({fontSize: '1.2em'}, 300)
+                        .animate({fontSize: '1em'}, 300);
+                });
+
+                // Alternative way to attach click event
+                $('#click-event-btn').on('click', function() {
+                    console.log('Click event triggered - this is an alternative method');
+                });
+
+                // ====== 2. jQuery EFFECT: FadeIn/FadeOut (Introduction to Effects) ======
+                $('#effect-target-btn').click(function() {
+                    var $target = $('#effect-target');
+
+                    if ($target.is(':visible')) {
+                        // If visible, fade out
+                        $target.fadeOut(1000, function() {
+                            $('#effect-target-btn').text('Show Content');
+                        });
+                    } else {
+                        // If hidden, fade in
+                        $target.fadeIn(1000, function() {
+                            $('#effect-target-btn').text('Hide Content');
+                        });
+                    }
+                });
+
+                // Additional jQuery effects demonstration
+                // Other effects like slideDown, slideUp, toggle,etc.
+                $('#effect-target-btn').hover(
+                    function() {
+                        $(this).css('transform', 'scale(1.05)');
+                    },
+                    function() {
+                        $(this).css('transform', 'scale(1)');
+                    }
+                );
+            });
+        </script>
+    </body>
+</html>
