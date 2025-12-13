@@ -1,39 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Galaxy Pizza</title>
-        <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
-        <script src="Pizza_JavaScript/Pizza.js" defer></script>    
-    </head>
-    <body>
-        <!-- Header -->
-        <header>
-            <h1>Galaxy Pizza</h1>
-            <nav>
-                <a href="#order">Order</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Pizza</title>
+    <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="Pizza_JavaScript/Pizza.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1><i class="fas fa-pizza-slice"></i> Galaxy Pizza</h1>
+        <nav>
+            <a href="#order">Order</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <img src="images/hero.jpg" alt="Galaxy Pizza Banner">
-            <h2>Galaxy Pizza</h2>
-            <p>We have the most delicious pizzas you'll think it's magical!</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Galaxy Pizza Banner">
+        <h2>Galaxy Pizza</h2>
+        <p>We have the most delicious pizzas you'll think it's magical!</p>
+    </section>
 
-        <!-- Order Section -->
-        <section id="order" class="order-section">
-            <h2>--- Order ---</h2>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2><i class="fas fa-info-circle"></i> About Galaxy Pizza</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Founded in 2015, Galaxy Pizza has been serving the South Shields community with out-of-this-world pizzas for over a decade. Our mission is to bring cosmic flavours to your table with every slice.</p>
+                <p>What makes our pizza special? We are use only the freshest ingredients sourced from local suppliers, hand-tossed dough made fresh daily, and our secret family sauce recipe that's been passed down for generations.</p>
+                <p>Our team of pizza artisans are passionate about creating the perfect pie - whether you're craving a classic Margherita or an adventurous specialty pizza like our famous Black Hole Meat Feast.</p>
+                <p>We believe pizza should be an experience, not just a meal. That's why we're created a space where families, friends, and pizza lovers of all ages can gather to enjoy delicious food in a fun, space-themed atmosphere.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/pizza-chef.jpg" alt="Our Pizza Chef">
+            </div>
+        </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <i class="fas fa-pizza-slice"></i>
+                <h3>10,000+</h3>
+                <p>Pizzas Served</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-user-friends"></i>
+                <h3>500+</h3>
+                <p>Happy Customers Weekly</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-award"></i>
+                <h3>15+</h3>
+                <p>Awards Won</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-clock"></i>
+                <h3>30 mins</h3>
+                <p>Avg. Delivery Time</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Location</h3>
+                    <p>123 Galaxy way<br>South Shields<br>Tyne and Wear<br>NE33 1AA</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas  fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+441912345678">+44 191 234 5678</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@galaxypizza.co.uk">info@galaxypizza.co.uk</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Thursday: 11am - 10pm<br>Friday - Saturday: 11am - 11pm<br>Sunday: 12pm - 9pm</p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.1234567890123!2d-1.4321234567890123!3d54.97812345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487e1234567890ab%3A0xcdef1234567890ab!2sGalaxy%20Pizza!5e0!3m2!1sen!2suk!4v1610000000000!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="contact-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" arial-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" arial-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" arial-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" arial-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <h2>--- Order ---</h2>
+
+        <!-- Main Container (menuBG) -->
+        <div id="menuBG">
             <div class="menu-grid">
+
                 <!-- Size -->
-                 <div class="menu-item">
-                    <h3>Size</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-ruler-combined"></i> Size</h3>
                     <input type="radio" id="personal" name="size" value="7.00">
-                    <label for="personal">personal ........... £7.00</label><br>
+                    <label for="personal">Personal ........... £7.00</label><br>
                     <input type="radio" id="small" name="size" value="9.00">
                     <label for="small">Small ........... £9.00</label><br>
                     <input type="radio" id="medium" name="size" value="11.00" checked>
@@ -43,10 +127,10 @@
                     <input type="radio" id="extra-large" name="size" value="17.00">
                     <label for="extra-large">Extra Large ........... £17.00</label>
                 </div>
-                
+
                 <!-- Crust -->
-                <div class="menu-item">
-                    <h3>Crust</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-bread-slice"></i> Crust</h3>
                     <input type="radio" id="regular" name="crust" value="0">
                     <label for="regular">Regular</label><br>
                     <input type="radio" id="garlic-butter" name="crust" value="0">
@@ -60,8 +144,8 @@
                 </div>
 
                 <!-- Sauce -->
-                <div class="menu-item">
-                    <h3>Sauce</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-pepper-hot"></i> Sauce</h3>
                     <input type="radio" id="marinara" name="sauce" value="0" checked>
                     <label for="marinara">Marinara Sauce</label><br>
                     <input type="radio" id="white" name="sauce" value="0">
@@ -73,8 +157,8 @@
                 </div>
 
                 <!-- Cheese -->
-                <div class="menu-item">
-                    <h3>Cheese</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-cheese"></i> Cheese</h3>
                     <input type="radio" id="regular-cheese" name="cheese" value="0">
                     <label for="regular-cheese">Regular</label><br>
                     <input type="radio" id="extra-cheese" name="cheese" value="4.00" checked>
@@ -84,8 +168,8 @@
                 </div>
 
                 <!-- Veggies -->
-                <div class="menu-item">
-                    <h3>Veggies</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-carrot"></i> Veggies</h3>
                     <input type="checkbox" id="tomatoes" name="veggie" value="1">
                     <label for="tomatoes">Tomatoes</label><br>
                     <input type="checkbox" id="onions" name="veggie" value="1">
@@ -97,7 +181,7 @@
                     <input type="checkbox" id="mushrooms" name="veggie" value="1" checked>
                     <label for="mushrooms">Mushrooms</label><br>
                     <input type="checkbox" id="pineapple" name="veggie" value="1">
-                    <label for="pineapple" >Pineapple</label><br>
+                    <label for="pineapple">Pineapple</label><br>
                     <input type="checkbox" id="spinach" name="veggie" value="1" checked>
                     <label for="spinach">Spinach</label><br>
                     <input type="checkbox" id="jalapeno" name="veggie" value="1">
@@ -106,8 +190,8 @@
                 </div>
 
                 <!-- Meat -->
-                <div class="menu-item">
-                    <h3>Meat</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-drumstick-bite"></i> Meat</h3>
                     <input type="checkbox" id="pepperoni" name="meat" value="1" checked>
                     <label for="pepperoni">Pepperoni</label><br>
                     <input type="checkbox" id="sausage" name="meat" value="1">
@@ -125,10 +209,9 @@
                     <p class="note">Note: First meat topping is complimentary, +£2.00/topping for additional toppings.</p>
                 </div>
 
-                
                 <!-- Specialty Pizzas -->
-                <div class="menu-item">
-                    <h3>Specialty Pizzas</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-crown"></i> Specialty Pizzas</h3>
                     <input type="radio" id="galaxy-supreme" name="specialty" value="0">
                     <label for="galaxy-supreme">Galaxy Supreme</label><br>
                     <input type="radio" id="nebula-veggie" name="specialty" value="0">
@@ -141,17 +224,17 @@
                     <label for="no-specialty">Build Your Own</label>
                     <p class="note">Choose a specialty pizza or build your own!</p>
                 </div>
-
+                
                 <!-- Drinks & Desserts -->
-                <div class="menu-item">
-                    <h3>Drinks & Desserts</h3>
+                <div class="menu-card">
+                    <h3><i class="fas fa-glass-martini-alt"></i> Drinks & Desserts</h3>
                     <input type="checkbox" id="cosmic-cola" name="drink" value="3.50">
                     <label for="cosmic-cola">Cosmic Cola ........... £3.50</label><br>
                     <input type="checkbox" id="starbust-lemonade" name="drink" value="4.00">
                     <label for="starbust-lemonade">Starbust Lemonade ........... £4.00</label><br>
                     <input type="checkbox" id="moon-milkshake" name="drink" value="4.50">
                     <label for="moon-milkshake">Moon Milkshake ........... £4.50</label><br>
-                    <input type="checkbox" id="galaxy-gelato" name="desert" value="4.00">
+                    <input type="checkbox" id="galaxy-gelato" name="dessert" value="4.00">
                     <label for="galaxy-gelato">Galaxy Gelato ........... £4.00</label><br>
                     <input type="checkbox" id="meteor-brownie" name="dessert" value="3.75">
                     <label for="meteor-brownie">Meteor Brownie ........... £3.75</label><br>
@@ -159,27 +242,30 @@
                     <label for="space-cake">Space Cake ........... £3.25</label>
                 </div>
             </div>
+        </div>
 
-            <!-- Order Summary -->
-            <div class="order-summary">
-                <button id="cancel-btn">Cancel</button>
-                <button id="place-order-btn">Place Order</button>
-                <div class="summary-box">
-                    <h3>--- Order ---</h3>
-                    <div id="order-item">
-                        <strong>Item</strong> <strong>Subtotal</strong>
-                        <!-- Item will be added here by JavaScript -->
-                    </div>
-                    <p><strong>Total Price:</strong> <span id="total-price">£0.00</span></p>
+        <!-- Order Summary (cart) -->
+        <div id="cart">
+            <button id="cancel-btn"><i class="fas fa-times-circle"></i> Cancel</button>
+            <button id="place-order-btn"><i class="fas fa-check-circle"></i> Place Order</button>
+
+            <!-- Show Text (showText) -->
+            <div id="showText">
+                <h3><i class="fas fa-receipt"></i> --- Order ---</h3>
+                <div id="order-item">
+                    <strong>Item</strong> <strong>Subtotal</strong>
+                    <!-- Item will be added here by JavaScript -->
                 </div>
+                <p><strong>Total Price:</strong> <span id="total-price">£0.00</span></p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
-            <img src="images/pizza-slice-galaxy.png" alt="Pizza Slice Galaxy" width="50">
-            <img src="images/alien-image.png" alt="Galaxy Pizza Logo" width="50">
-            <p>Copyright Galaxy Pizza 2025</p>
-        </footer>
-    </body>
+    <!-- Footer -->
+    <footer>
+        <img src="images/pizza-slice-galaxy.png" alt="Pizza Slice Galaxy" width="50">
+        <img src="images/alien-image.png" alt="Galaxy Pizza Logo" width="50">
+        <p>Copyright Galaxy Pizza 2025</p>
+    </footer>
+</body>
 </html>

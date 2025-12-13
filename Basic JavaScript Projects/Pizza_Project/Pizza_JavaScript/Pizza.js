@@ -32,58 +32,58 @@ function updateOrderSummary() {
     let itemsHtml = '<strong>Item</strong> <strong>Subtotal</strong><br>';
 
     // Size
-    itemsHtml += `${currentOrder.size.name} <span style="float:right;">£${currentOrder.size.price.toFixed(2)}</span><br>`;
+    itemsHtml += `<div>${currentOrder.size.name} <span>£${currentOrder.size.price.toFixed(2)}</span></div>`;
     subtotal += currentOrder.size.price;
 
     // Crust
     if (currentOrder.crust.price > 0) {
-        itemsHtml += `${currentOrder.crust.name} <span style="float:right;">+£${currentOrder.crust.price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${currentOrder.crust.name} <span>+£${currentOrder.crust.price.toFixed(2)}</span></div>`;
         subtotal += currentOrder.crust.price;
     } else {
-        itemsHtml += `${currentOrder.crust.name} <span style="float:right;">£0.00</span><br>`;
+        itemsHtml += `<div>${currentOrder.crust.name} <span>£0.00</span></div>`;
     }
 
     // Sauce & Cheese
-    itemsHtml += `${currentOrder.sauce.name} <span style="float:right;">£0.00</span><br>`;
+    itemsHtml += `<div>${currentOrder.sauce.name} <span>£0.00</span></div>`;
     if (currentOrder.cheese.price > 0) {
-        itemsHtml += `${currentOrder.cheese.name} <span style="float:right;">+£${currentOrder.cheese.price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${currentOrder.cheese.name} <span>+£${currentOrder.cheese.price.toFixed(2)}</span></div>`;
         subtotal += currentOrder.cheese.price;
     } else {
-        itemsHtml += `${currentOrder.cheese.name} <span style="float:right;">£0.00</span><br>`;
+        itemsHtml += `<div>${currentOrder.cheese.name} <span>£0.00</span></div>`;
     }
 
-    // Veggies (first free, others +£2.00)
+    // Veggies (first free, others +2.00)
     let veggieCount = 0;
     currentOrder.veggies.forEach(item => {
         veggieCount++;
         const price = veggieCount === 1 ? 0 : 2.00;
-        itemsHtml += `${item} <span style="float:right;">£${price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${item} <span>£${price.toFixed(2)}</span></div>`;
         subtotal += price;
     });
 
-    // Meats (first free, others +£2.00)
+    // Meats (first free, others +2.00)
     let meatCount = 0;
     currentOrder.meats.forEach(item => {
         meatCount++;
         const price = meatCount === 1 ? 0 : 2.00;
-        itemsHtml += `${item} <span style="float:right;">£${price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${item} <span>£${price.toFixed(2)}</span></div>`;
         subtotal += price;
     });
 
     // Drinks
     currentOrder.drinks.forEach(drink => {
-        itemsHtml += `${drink.name} <span style="float:right;">£${drink.price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${drink.name} <span>£${drink.price.toFixed(2)}</span></div>`;
         subtotal += drink.price;
     });
 
     // Desserts
     currentOrder.desserts.forEach(dessert => {
-        itemsHtml += `${dessert.name} <span style="float:right;">£${dessert.price.toFixed(2)}</span><br>`;
+        itemsHtml += `<div>${dessert.name} <span>£${dessert.price.toFixed(2)}</span></div>`;
         subtotal += dessert.price;
     });
 
     // Update total
-    itemsHtml += `<strong>Total Price:</strong> <span style="float:right; font-weight:bold; color:#ffcc00;">£${subtotal.toFixed(2)}</span>`;
+    itemsHtml += `<div><strong>Total Price:</strong> <span style="color:#ffcc00;">£${subtotal.toFixed(2)}</span></div>`;
 
     orderItemsDiv.innerHTML = itemsHtml;
     totalPriceSpan.textContent = `£${subtotal.toFixed(2)}`;
@@ -193,7 +193,7 @@ cancelBtn.addEventListener('click', () => {
     // Reset all selections
     sizeRadios[1].checked = true; // Medium
     crustRadios[2].checked = true; // Cheese Stuffed
-    sauceRadios[0].checked = true; // Marinara
+    sauceRadios[0].checked = true; // Marinara Sauce
     cheeseRadios[1].checked = true; // Extra Cheese
     veggieCheckboxes.forEach(cb => cb.checked = false);
     meatCheckboxes.forEach(cb => cb.checked = false);
@@ -222,4 +222,9 @@ cancelBtn.addEventListener('click', () => {
 // Place Order button
 placeOrderBtn.addEventListener('click', () => {
     alert(`Your order has been placed!\n\n${orderItemsDiv.innerHTML.replace(/<[^>]*>/g, '')}\n\nTotal: ${totalPriceSpan.textContent}`);
+});
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+    updateOrderSummary();
 });

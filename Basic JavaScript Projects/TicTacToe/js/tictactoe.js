@@ -210,7 +210,7 @@ function checkWinConditions() {
         scoreTies++;
         updateScoreDisplay();
         // Play tie sound
-        audio('./media/ties.mp3');
+        audio('./media/tie.mp3');
         // This function sets a 1 second timer before the resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
