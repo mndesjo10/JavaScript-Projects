@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.parse() Method Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #34495e;
+        }
+        .result {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .code-block {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .object-display {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JSON.parse() Method Assignment</h1>
+        <p>Write and successfully execute the JSON.parse() method in the browser.</p>
+
+        <div class="code-block">
+            <pre>// JSON string
+var jsonString = '{"name": "Dax", "breed": "Great Pyrenees", "color": "White"}';
+
+// Parsing JSON string to JavaScript object
+var dogObject = JSON.parse(jsonString);</pre>
+            </div>
+
+            <p>Result of JSON.parse():</p>
+            <div id="myDog" class="result">Loading...</div>
+
+            <div class="object-display">
+                <p>Accessing individual properties:</p>
+                <p id="dogName"></p>
+                <p id="dogBreed"></p>
+                <p id="dogColor"></p>
+            </div>
+    </div>
+
+<script>
+    // JSON string
+    var jsonString = '{"name": "Dax", "breed": "Great Pyrenees", "color": "White"}';
+
+    // Parse JSON string to JavaScript object
+    var dogObject = JSON.parse(jsonString);
+
+    // Display the parsed object as string
+    document.getElementById("myDog").innerHTML = JSON.stringify(dogObject, null, 2);
+
+    // Display individual properties
+    document.getElementById("dogName").innerHTML = "Name: " + dogObject.name;
+    document.getElementById("dogBreed").innerHTML = "Breed: " + dogObject.breed;
+    document.getElementById("dogColor").innerHTML = "Color: " + dogObject.color;
+</script>
+</body>
+</html>
