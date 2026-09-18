@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ondblclick Event Handler Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        p {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        p:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ondblclick Event Handler Challenge</h1>
+
+    <!-- Paragraph with ondblclick event handler -->
+    <p id="myParagraph" ondblclick="handleDoubleClick()">
+        Double-click this paragraph to trigger the event!
+    </p>
+
+    <div id="output"></div>
+
+    <!-- Script element with function definition -->
+    <script>
+        function handleDoubleClick() {
+            // Get the paragraph element
+            const paragraph = document.getElementById('myParagraph');
+
+            // Change the paragraph content
+            paragraph.innerHTML = "🎉 Great job! You double-clicked me! ";
+            paragraph.style.backgroundColor = "#2196f3";
+
+            // Display a message in the output div
+            const outputDiv = document.getElementById('output');
+            output.innerHTML = "<p style='color: green; margin-top: 20px;'><strong>Success:</strong>Success!</strong> The ondblclick event handler worked perfectly!</p>";
+
+            // Also show an alert
+            alert("Double-click detected! the ondblclick event handler is working!");
+        }
+    </script>
+
+</body>
+</html>
